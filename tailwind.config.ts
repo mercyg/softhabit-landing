@@ -9,8 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        cream: "#F5F1E8",
+        sage: {
+          DEFAULT: "#7A8B6F",
+          light: "#8A9B7F",
+          dark: "#6A7B5F",
+        },
+        charcoal: "#3D3D3D",
+      },
+      fontFamily: {
+        serif: ["var(--font-fraunces)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+      },
+      animation: {
+        "fade-in": "fadeIn 0.6s ease-out forwards",
+        "fade-in-up": "fadeInUp 0.6s ease-out forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
     },
   },
